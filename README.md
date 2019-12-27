@@ -40,7 +40,12 @@ If a hunk needs to be split, use the `s` command. If the hunk cannot be split, u
 TODO
 
 ## Resolving Merge Conflicts
-resolve merge conflicts with --theirs / --ours
+Example of checkout theirs/ours:
+> When merging branchA to branchB and you want to keep all changes from branchB for a specific file:  
+`# branchB is checked out`  
+`$ git merge branchA`  
+`$ git checkout --ours file.txt`  
+Here "--ours" refers to the version we have checked out, if we wanted to keep changes from branchA the option to use is "--theirs".
 
 ## Amending Old Commits
 > **IMPORTANT** Never amend public commits as you will mess up other people's git histories.
