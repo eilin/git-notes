@@ -7,18 +7,6 @@
 - [resolving merge conflicts](#resolving-merge-conflicts)
 - [amending old commits](#amending-old-commits)
 
-add -p
-
-rerere
-
-git reset HEAD~N
---mixed (default mode) : updates index, not working copy
---soft : doesn't update index nor working copy
---hard : updates index and working copy
-
-amending commits
-amending HEAD: add changes to index and use commit --amend (-C to accept same commit message)
-amending commit older than head: add change as new commit and squash with old commit using interactive rebase
 
 ## Log Format
 Format logs with options:
@@ -44,6 +32,7 @@ If a hunk needs to be split, use the `s` command. If the hunk cannot be split, u
 
 
 ## Rebasing
+TODO
 
 ## Resolving Merge Conflicts
 resolve merge conflicts with --theirs / --ours
@@ -61,3 +50,15 @@ This can be done with the fixup and autosquash options.
 1. Add change as new commit with `commit --fixup HASH`, where HASH is the hash of the old commit that you want to amend. This will create a new commit with the message "fixup! OLD_COMMIT_MSG".
 2. Rebase with `rebase --autosquash --interactive` and git will know you want to squash the amendment from the "fixup!" in the commit message.
 3. You should see your fixup commit reordered to be after the amend target in the interactive menu. Finish rebasing and the old commit should be changed.
+
+## TODOs
+rebasing (section and anchor exists)
+
+rerere
+
+git reset HEAD~N
+--mixed (default mode) : updates index, not working copy
+--soft : doesn't update index nor working copy
+--hard : updates index and working copy
+
+git aliases
