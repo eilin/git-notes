@@ -49,7 +49,7 @@ If a hunk needs to be split, use the `s` command. If the hunk cannot be split, u
 resolve merge conflicts with --theirs / --ours
 
 ## Amending Old Commits
-
+> **IMPORTANT** Never amend public commits as you will mess up other people's git histories.
 ### Amending HEAD
 Add changes to index and use `commit --amend` (with `-C` option to accept existing message).
 
@@ -60,3 +60,4 @@ This can be done with the fixup and autosquash options.
 
 1. Add change as new commit with `commit --fixup HASH`, where HASH is the hash of the old commit that you want to amend. This will create a new commit with the message "fixup! OLD_COMMIT_MSG".
 2. Rebase with `rebase --autosquash --interactive` and git will know you want to squash the amendment from the "fixup!" in the commit message.
+3. You should see your fixup commit reordered to be after the amend target in the interactive menu. Finish rebasing and the old commit should be changed.
