@@ -1,6 +1,7 @@
 # Git Notes
 `"git gud, scrub"`
 
+- [log](#log)
 - [rebasing](#rebasing)
 - [resolving merge conflicts](#resolving-merge-conflicts)
 - [amending old commits](#amending-old-commits)
@@ -18,7 +19,13 @@ amending commits
 amending HEAD: add changes to index and use commit --amend (-C to accept same commit message)
 amending commit older than head: add change as new commit and squash with old commit using interactive rebase
 
-
+## Log
+Format logs with options:
+```
+git log --pretty=oneline --abbrev-commit
+28407e0 (HEAD -> master) amending and autosquash
+cffef7d (origin/master) initial commit
+```
 
 ## Rebasing
 
