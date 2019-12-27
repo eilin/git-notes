@@ -2,6 +2,7 @@
 `"git gud, scrub"`
 
 - [log format](#log-format)
+- [selectively adding](#selectively-adding)
 - [rebasing](#rebasing)
 - [resolving merge conflicts](#resolving-merge-conflicts)
 - [amending old commits](#amending-old-commits)
@@ -36,9 +37,10 @@ Custom format with colors:
 ```
 git log --pretty="%Cred%h%Creset %C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(cyan)[%an]%Creset"
 ```
-## Selectively Logging
-`add -p` to enter "patch" mode.
-Use the `e` command to edit what will be staged in a specific chunk.
+## Selectively Adding
+`add -p` to enter "patch" mode to choose which hunks will be staged.
+
+If a hunk needs to be split, use the `s` command. If the hunk cannot be split, use the `e` command to edit the patch context and add a "#" in front of the lines you don't want staged.
 
 
 ## Rebasing
