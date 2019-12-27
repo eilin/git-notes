@@ -2,6 +2,7 @@
 `"git gud, scrub"`
 
 - [log format](#log-format)
+- [aliases](#aliases)
 - [selectively adding](#selectively-adding)
 - [rebasing](#rebasing)
 - [resolving merge conflicts](#resolving-merge-conflicts)
@@ -12,8 +13,6 @@
 Format logs with options:
 ```
 git log --pretty=oneline --abbrev-commit
-28407e0 (HEAD -> master) amending and autosquash
-cffef7d (origin/master) initial commit
 ```
 
 Custom format:
@@ -25,6 +24,12 @@ Custom format with colors:
 ```
 git log --pretty="%Cred%h%Creset %C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(cyan)[%an]%Creset"
 ```
+
+## Aliases
+`git config --global alias.st status`
+
+`git config --global alias.ll "log --pretty='%Cred%h%Creset %C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(cyan)[%an]%Creset'"`
+
 ## Selectively Adding
 `add -p` to enter "patch" mode to choose which hunks will be staged.
 
