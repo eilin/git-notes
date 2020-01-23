@@ -72,3 +72,7 @@ git reset HEAD~N
 --hard : updates index and working copy
 
 git aliases
+
+interactive rebase edit the next commands using --edit-todo
+resetting to before a interactive rebase based on the reflog
+push --force-with-lease (a safer force push)
