@@ -35,9 +35,13 @@ git log --pretty="%Cred%h%Creset %C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(c
 
 If a hunk needs to be split, use the `s` command. If the hunk cannot be split, use the `e` command to edit the patch context and add a "#" in front of the lines you don't want staged.
 
-
 ## Rebasing
-TODO
+Using rebase instead of pull will keep your history easier to read with less merge commits.
+
+Interactive rebase (-i, --interactive) is very useful for editing your commit history to clean up before pushing.
+
+## Merge
+If you're working on branch A (feature, fix) and want to merge changes in branch B (master, develop) to A, you can skip needing to switch to B to pull the latest code by running: `git fetch <remote> <srcBranch>:<destBranch>`
 
 ## Resolving Merge Conflicts
 Example of checkout theirs/ours:
@@ -62,9 +66,7 @@ This can be done with the fixup and autosquash options.
 3. You should see your fixup commit reordered to be after the amend target in the interactive menu. Finish rebasing and the old commit should be changed.
 
 ## TODOs
-rebasing (section and anchor exists)
-
-rerere
+add notes on rerere
 
 git reset HEAD~N
 --mixed (default mode) : updates index, not working copy
