@@ -1,5 +1,5 @@
 # Git Notes
-`"git gud, scrub"`
+`"git gud --scrub"`
 
 - [log format](#log-format)
 - [aliases](#aliases)
@@ -28,7 +28,7 @@ git log --pretty="%Cred%h%Creset %C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(c
 ## Aliases
 `git config --global alias.st status`
 
-`git config --global alias.ll "log --pretty='%Cred%h%Creset %C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(cyan)[%an]%Creset'"`
+`git config --global alias.lo "log --pretty='%Cred%h%Creset %C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(cyan)[%an]%Creset'"`
 
 ## Selectively Adding
 `add -p` to enter "patch" mode to choose which hunks will be staged.
@@ -70,8 +70,6 @@ git reset HEAD~N
 --mixed (default mode) : updates index, not working copy
 --soft : doesn't update index nor working copy
 --hard : updates index and working copy
-
-git aliases
 
 interactive rebase edit the next commands using --edit-todo
 
